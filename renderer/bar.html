@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <title>Coach</title>
+    <link rel="stylesheet" href="bar.css" />
+  </head>
+  <body>
+    <main class="bar">
+      <p id="say" class="say">Escolha o cliente e clique em Iniciar.</p>
+      <p id="heard" class="heard"></p>
+      <footer class="controls">
+        <select id="client" aria-label="Cliente"></select>
+        <button id="toggle" class="primary">Iniciar</button>
+        <span id="status" class="status"></span>
+        <span class="spacer"></span>
+        <button id="settings" aria-label="Configurações" title="Configurações">Ajustes</button>
+        <button id="quit" aria-label="Fechar" title="Fechar">Fechar</button>
+      </footer>
+    </main>
+    <script src="bar.js"></script>
+  </body>
+</html>

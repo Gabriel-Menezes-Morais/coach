@@ -1,0 +1,38 @@
+{
+  "name": "coach",
+  "version": "1.0.0",
+  "description": "Barra no topo da tela que transcreve a call ao vivo e mostra o que dizer.",
+  "main": "src/main.js",
+  "author": "Gabriel Menezes",
+  "scripts": {
+    "start": "electron .",
+    "test": "node --test \"test/*.test.js\"",
+    "dist": "electron-builder --win nsis --publish never"
+  },
+  "build": {
+    "appId": "io.github.gabrielmenezes.coach",
+    "productName": "Coach",
+    "artifactName": "Coach-Setup.${ext}",
+    "files": [
+      "src/**",
+      "renderer/**",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false
+    }
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^1.7.0",
+    "ws": "^8.22.2"
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0"
+  }
+}

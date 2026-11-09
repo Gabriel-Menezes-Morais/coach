@@ -1,0 +1,14 @@
+node_modules/
+dist/
+
+# Chaves e dados de clientes nunca entram no repositório
+.env
+.env.*
+!.env.example
+settings.json
+*.key
+*.pem
+contexts/
+clientes/
+minha-empresa.md
+*.log

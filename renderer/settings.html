@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self'; script-src 'self'" />
+    <title>Coach: configurações</title>
+    <link rel="stylesheet" href="settings.css" />
+  </head>
+  <body>
+    <form id="form">
+      <h1>Configurações</h1>
+
+      <label>Chave do ElevenLabs
+        <input id="elevenlabsKey" type="password" autocomplete="off" />
+      </label>
+      <label>Idioma da call
+        <select id="language">
+          <option value="por">Português</option>
+          <option value="eng">Inglês</option>
+          <option value="spa">Espanhol</option>
+        </select>
+      </label>
+
+      <label>Modelo vem de
+        <select id="provider">
+          <option value="anthropic">Anthropic</option>
+          <option value="openai-compatible">Gateway compatível com OpenAI</option>
+        </select>
+      </label>
+      <label>Modelo
+        <input id="model" type="text" list="models" autocomplete="off" />
+        <datalist id="models">
+          <option value="claude-haiku-5-5">Mais rápido</option>
+          <option value="claude-sonnet-5-5">Equilíbrio</option>
+          <option value="claude-opus-5-5">Mais inteligente, mais lento</option>
+        </datalist>
+      </label>
+
+      <section id="anthropic">
+        <label>Chave da Anthropic
+          <input id="anthropicKey" type="password" autocomplete="off" />
+        </label>
+      </section>
+
+      <section id="gateway">
+        <label>URL base
+          <input id="openaiBaseUrl" type="url" autocomplete="off" placeholder="https://exemplo.com/v1" />
+        </label>
+        <label>Chave do gateway
+          <input id="openaiKey" type="password" autocomplete="off" />
+        </label>
+        <label>Cabeçalhos extras, em JSON
+          <textarea id="openaiHeaders" rows="3" spellcheck="false"></textarea>
+        </label>
+        <label>Parâmetros extras da requisição, em JSON
+          <textarea id="openaiBody" rows="2" spellcheck="false"></textarea>
+        </label>
+      </section>
+
+      <div class="actions">
+        <button type="submit" class="primary">Salvar</button>
+        <button type="button" id="contexts">Abrir pasta de contextos</button>
+        <span id="message" role="status"></span>
+      </div>
+    </form>
+    <script src="settings.js"></script>
+  </body>
+</html>

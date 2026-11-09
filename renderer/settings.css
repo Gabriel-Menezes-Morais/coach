@@ -1,0 +1,88 @@
+:root {
+  --bg: #101114;
+  --line: #2c2e34;
+  --text: #f4f4f5;
+  --muted: #9a9ca5;
+  --field: #1c1e23;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font: 14px 'Segoe UI Variable Text', 'Segoe UI', sans-serif;
+  padding: 24px;
+}
+
+form,
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+input,
+select,
+textarea {
+  padding: 8px 10px;
+  font: inherit;
+  color: var(--text);
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+}
+
+[hidden] {
+  display: none;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+button {
+  padding: 8px 14px;
+  font: inherit;
+  color: var(--text);
+  background: var(--field);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button.primary {
+  color: var(--bg);
+  background: var(--text);
+  border-color: var(--text);
+  font-weight: 600;
+}
+
+#message {
+  color: var(--muted);
+  font-size: 12px;
+}
